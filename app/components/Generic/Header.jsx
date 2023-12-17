@@ -53,7 +53,7 @@ export const Header = () => {
   };
 
   return (
-    <div className="p-header-wrapper">
+    <header className="p-header-wrapper">
       <div className='p-header-box p-container'>
         <div className="p-header-nav-logobox">
           <img className='p-header-nav-logo' src={headerContent.logo.img} alt="banner-image" />
@@ -63,9 +63,9 @@ export const Header = () => {
         <div className="p-header-nav-burger">
           <label className="p-header-nav-burger">
           </label>
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+          <div className="bar1"></div>
+          <div className="bar2"></div>
+          <div className="bar3"></div>
         </div>
 
         <nav className="p-header-nav-left">
@@ -93,6 +93,6 @@ export const Header = () => {
         </nav>
 
       </div>
-    </div>
+    </header>
   )
 }

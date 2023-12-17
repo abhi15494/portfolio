@@ -35,7 +35,7 @@ export const Footer = () => {
 
 
   return (
-    <div className='p-footer-wrapper animate'>
+    <footer className='p-footer-wrapper animate'>
       <div className='p-footer-box p-container'>
         <div className="p-footer-movetotop">
           <a className='p-footer-movetotop-content' onClick={handleMovetoTop}>
@@ -68,6 +68,6 @@ export const Footer = () => {
         </div>
 
       </div>
-    </div>
+    </footer>
   )
 }

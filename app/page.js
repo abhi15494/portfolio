@@ -1,5 +1,4 @@
 "use client";
-import Image from 'next/image'
 
 import React, { useLayoutEffect } from 'react'
 import { Header } from './components/Generic/Header'
@@ -16,57 +15,36 @@ import { util_lozad } from './utility';
 import './scss/index.scss';
 
 const Home = () => {
-  const sections = [
-    {
-      id: 'Aboutme',
-      ele: <Banner />
-    },
-    {
-      id: 'Aboutme1',
-      ele: <Aboutus />
-    },
-    {
-      id: 'ProjectsWorked',
-      ele: <ProjectsWorked />
-    },
-    {
-      id: 'Skills',
-      ele: <Skills />
-    },
-    {
-      id: 'Experience',
-      ele: <Experience />
-    },
-    {
-      id: 'Hobbies',
-      ele: <Hobbies />
-    },
-    {
-      id: 'Service',
-      ele: <Service />
-    },
-  ];
+  const sections = {
+    Aboutme: <Banner />,
+    Aboutme1: <Aboutus />,
+    ProjectsWorked: <ProjectsWorked />,
+    Skills: <Skills />,
+    Experience: <Experience />,
+    Hobbies: <Hobbies />,
+    Service: <Service />,
+  };
 
   useLayoutEffect(() => {
     util_lozad();
   }, []);
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         {
-          sections.map((sec, index) => {
-            return <section className="p-section"  key={'SECTION_' + index + sec.id} id={'section_' + sec.id}>
+          Object.keys(sections).map((sec, index) => {
+            return <section className="p-section"  key={'SECTION_' + index + sec} id={'section_' + sec}>
               <article className="p-container">
-                {sec.ele}
+                {sections[sec]}
               </article>
             </section>
           })
         }
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 
