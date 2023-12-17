@@ -1,0 +1,186 @@
+$topPos: 27px;
+
+.p-header {
+    &-wrapper {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        &::after {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 100%;
+            background-color: $deepdark;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border-bottom: 4px solid $black;
+        }
+        @include media(desktop) {
+            top: -80px;
+            &::after {
+                bottom: $topPos;
+            }
+        }
+    }
+
+    &-box {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        z-index: 12;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        gap: 20px;
+        justify-content: space-between;
+        @include media(desktop) {
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding-bottom: 00px;
+            padding-top: 40px;
+        }
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 4px;
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            z-index: 15;
+            background: $gradient;
+            bottom: 0;
+            @include media(desktop) {
+                background: $white;
+                bottom: $topPos;
+            }
+        }
+    }
+    &-nav {
+        &-left,
+        &-right {
+            flex: 1;
+            display: none;
+            padding: 20px;
+            @include media(desktop) {
+                display: block;
+                padding: 0rem;
+            }
+        }
+        
+        &-left {
+            order: 5;
+            .p-header-nav-list {
+                @include media(desktop) {
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        &-right {
+            order: 6;
+        }
+
+        &-logobox {
+            order: 1;
+        }
+
+        &-burger {
+            order: 2;
+            .bar1, .bar2, .bar3 {
+                width: 28px;
+                height: 3px;
+                background-color: $white;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+            &-checkbox {
+                transform: scale(2);
+                position: absolute;
+                right: 40px;
+                z-index: 10;
+                opacity: 0;
+                &:checked {
+                    & ~ .p-header-nav-burger {
+                        .bar1 {
+                            transform: translate(0, 9px) rotate(-45deg);
+                        }
+                        .bar2 {
+                            opacity: 0;
+                        }
+                        .bar3 {
+                            transform: translate(0, -9px) rotate(45deg);
+                        }
+                    }
+                    & ~ .p-header-nav-left,
+                    & ~ .p-header-nav-right {
+                        display: block;
+                        position: fixed;
+                        width: 100%;
+                        left: 0;
+                        height: 100%;
+                        background: #0007;
+                        backdrop-filter: blur(5px);
+                    }
+
+                    & ~ .p-header-nav-left {
+                        top: 64px;
+                    }
+                    & ~ .p-header-nav-right {
+                        top: 188px;
+                        background: none;
+                    }
+                }
+            }
+        }
+        @include media(desktop) {
+            &-left {
+                order: 1;
+            }
+            &-logobox {
+                order: 2;
+            }
+            &-right {
+                order: 3;
+            }
+            &-burger {
+                order: 2;
+                display: none;
+            }
+        }
+        
+        &-list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            gap: 20px;
+            flex-direction: column;
+            @include media(desktop) {
+                flex-direction: row;
+                gap: 40px;
+            }
+        }
+        &-link {
+            color: $white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: block;
+            @include media(desktop) {
+                letter-spacing: 2px;
+            }
+        }
+        &-logo {
+            width: auto;
+            position: relative;
+            z-index: 20;
+            max-height: 40px;
+            @include media(desktop) {
+                max-height: 140px;
+            }
+        }
+    }
+}

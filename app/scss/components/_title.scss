@@ -1,0 +1,26 @@
+.p-title {
+    &-wrapper {}
+    &-box {
+        position: relative;
+        &::after {
+            content: '';
+            height: 6px;
+            background: $gradient;
+            display: block;
+            margin: 10px auto 30px;
+            border-radius: 6px;
+            width: 100%;
+            @include media(tablet) {
+                width: 76px;
+            }
+        }
+    }
+    &-ele {
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 0px;
+        @include media(tablet) {
+            text-align: center;
+        }
+    }
+}

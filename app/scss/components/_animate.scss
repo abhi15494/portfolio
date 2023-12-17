@@ -1,0 +1,10 @@
+.animate {
+    transition: 1s all;
+    opacity: 0;
+    transform: translateY(200px);
+    animation-delay: 0.3s;
+    &[data-loaded="true"] {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,55 @@
+.p-counter {
+    &-wrapper {}
+    &-box {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        @include media(tablet) {
+            flex-direction: row;
+        }
+    }
+    &-left {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        @include media(tablet) {
+            text-align: right;
+            right: -20px;
+        }
+    }
+    &-title {
+        font-size: 16px;
+        font-weight: 700;
+    }
+    &-subtitle {
+        color: $btn;
+        font-size: 14px;
+        font-weight: 400;
+    }
+    &-right {
+        position: relative;
+        background-color: $dark;
+        border-radius: 200px;
+        position: relative;
+        z-index: 9;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        @include media(tablet) {
+            margin-top: 0px;
+            width: 150px;
+            height: 150px;
+        }
+    }
+    &-count {
+        font-family: $font2;
+        padding-left: 10px;
+        font-size: 32px;
+        @include media(tablet) {
+            font-size: 64px;
+        }
+    }
+}

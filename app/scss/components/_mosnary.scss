@@ -1,0 +1,16 @@
+.p-mosnary {
+    &-box {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    &-list {
+        columns: 5;
+        column-gap: 30px;
+    }
+    &-item {
+        margin-bottom: 30px;
+        break-inside: avoid;
+    }
+    &-ele {}
+    &-img {}
+}

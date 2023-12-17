@@ -1,0 +1,67 @@
+.p-banner {
+    &-wrapper {}
+    &-box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    &-img {
+        &-box {
+            position: relative;
+            padding-right: 20px;
+            flex: 0 0 100%;
+            @include media(tablet) {
+                flex: 0 0 60%;
+            }
+        }
+        &-ele {
+            filter: grayscale(1);
+            mix-blend-mode: luminosity;
+            box-shadow: inset 0px 0px 20px 20px black;
+        }
+        &-layer {
+            background: linear-gradient(0deg, #000000, #00000000 150px);
+            // background: $black;
+            // mix-blend-mode: multiply;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+    &-cnt {
+        &-box {
+            flex: 0 0 40%;
+            padding-left: 20px;
+        }
+        &-title {
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 0;
+        }
+        &-img {
+            display: none;
+            @include media(tablet) {
+                max-width: 150px;
+                margin-bottom: 20px;
+                display: block;
+                transform: scale(1) rotate(45deg) translate(-8px, -30px);
+            }
+        }
+        &-desc {
+            color: $gray;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+            margin-bottom: 20px;
+            display: block;
+        }
+        &-link {
+        }
+    }
+}

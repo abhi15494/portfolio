@@ -1,0 +1,45 @@
+.p-service {
+    &-wrapper {}
+    &-box {}
+    &-block {
+        margin-top: 40px;
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -$gap/2;
+        list-style: none;
+        padding: 0;
+        width: calc(100% + $gap);
+    }
+    &-item {
+        --col: 1;
+        @include media(tablet) {
+            --col: 2;
+        }
+        @include media(tablet) {
+            --col: 3;
+        }
+        padding: $gap;
+        flex: 0 0 calc(100% / var(--col));
+    }
+    &-iteminner {
+        background-color: $dark;
+        padding: 30px 20px;
+        border-radius: $radius;
+        height: 100%;
+    }
+    &-img {
+        max-height: 40px;
+        width: auto;
+        margin: 0px auto 20px;
+    }
+    &-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &-desc {
+        color: $btn;
+    }
+}

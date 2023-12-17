@@ -1,0 +1,29 @@
+html {
+    overflow: initial;
+    // -webkit-print-color-adjust: exact; 
+}
+
+body {
+    font-family: $font1;
+    background-color: $black;
+    color: $white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    @include media(tablet) {
+        line-height: 1.35;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+p {
+    color: $textlight;
+}

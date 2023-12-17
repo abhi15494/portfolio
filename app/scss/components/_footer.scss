@@ -1,0 +1,88 @@
+.p-footer {
+    &-wrapper {
+        background-color: $dark;
+    }
+    &-box { 
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        @include media(desktop) {
+            padding-top: 50px;
+        }
+    }
+    &-address {
+        &-box {
+            flex: 0 0 100%;
+            @include media(desktop) {
+                flex: 1;
+            }
+        }
+        &-cnt {
+            font-size: 14px;
+            font-weight: 400;
+            padding: 10px 0;
+            display: block;
+        }
+    }
+
+    &-blog {
+        &-box {
+            flex: 0 0 100%;
+            border-top: 1px solid $white;
+            padding-top: 30px;
+            margin-top: 30px;
+            @include media(desktop) {
+                flex: 0 0 25%;
+                border-top: none;
+                border-left: 1px solid $white;
+                padding-top: 0px;
+                margin-top: 0px;
+                padding-left: 30px;
+            }
+        }
+        &-title {
+            font-size: 14px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        &-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 -10px;
+        }
+        &-item {}
+        &-link {
+            text-decoration: none;
+            color: $white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &-label {}
+            &-icon {
+                height: 10px;
+                width: auto;
+            }
+        }
+    }
+
+    &-movetotop {
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        @include media(desktop) {
+            left: 50px;
+        }
+
+        &-content {
+            background-color: $deepdark;
+            padding: 10px;
+            cursor: pointer;
+            display: block;
+        }
+    }
+}

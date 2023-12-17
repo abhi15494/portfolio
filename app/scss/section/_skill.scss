@@ -1,0 +1,43 @@
+.p-skill {
+    &-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    &-box {
+        
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
+    }
+    &-item {
+        --col: 4;
+        @include media(tablet) {
+            --col: 4;
+        }
+        @include media(tablet) {
+            --col: 5;
+        }
+        flex: 0 0 calc(100% / var(--col));
+        padding-bottom: calc(100% / var(--col));
+        height: 0;
+        position: relative;
+    }
+    &-img {
+        max-width: 100px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        max-height: 60px;
+        @include media(tablet) {
+            max-height: 80px;
+        }
+        @include media(tablet) {
+            max-height: 100px;
+        }
+    }
+
+}

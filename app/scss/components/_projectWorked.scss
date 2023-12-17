@@ -1,0 +1,43 @@
+.p-projects {
+    &-wrapper {}
+    &-box {}
+    &-listbox {}
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -$gap/2;
+        list-style: none;
+        padding: 0;
+        width: calc(100% + $gap);
+    }
+    &-item {
+        --col: 2;
+        @include media(tablet) {
+            --col: 5;
+        }
+        @include media(tablet) {
+            --col: 5;
+        }
+        padding: $gap;
+        flex: 0 0 calc(100% / var(--col));
+    }
+    &-link {
+        display: block;
+        background-color: $white;
+        border-radius: 0;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: $radius;
+    }
+    &-title {
+        color: $dark;
+        font-size: 10px;
+        display: none;
+    }
+
+    &-icon {
+    }
+}

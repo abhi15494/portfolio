@@ -1,0 +1,24 @@
+.p-hobbies {
+    &-wrapper {}
+    &-box {}
+    &-block {}
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        --col: 3;
+        @include media(tablet) {
+            --col: 3;
+        }
+        @include media(tablet) {
+            --col: 6;
+        }
+        flex: 0 0 calc(100% / var(--col));
+        text-align: center;
+    }
+    &-img {
+        max-width: 80px;
+        margin: 30px auto;
+    }
+}
