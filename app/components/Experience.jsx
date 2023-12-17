@@ -1,6 +1,6 @@
 import React from 'react'
 import { UITitle } from './UI/Title'
-import { UITimeline } from './UI/Timeline'
+import { UITimeline } from './UI/Timeline.jsx'
 
 export const Experience = () => {
   const content = [
