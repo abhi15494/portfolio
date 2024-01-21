@@ -63,7 +63,7 @@ export const ProjectsWorked = () => {
           <ul className='p-projects-list'>
             {
               projectList.map((project, index) => (
-                <li className='p-projects-item animate'>
+                <li className='p-projects-item animate' key={"PROJECT_WORKED_ON_ITEM_" + index}>
                   <a className='p-projects-link' href={project.link} target="_blank">
                     <img className='p-projects-icon' data-src={project.img} alt={project.title + 'img'} />
                     <h3 className='p-projects-title'>{project.title}</h3>
