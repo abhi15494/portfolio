@@ -30,9 +30,9 @@ export const Experience = () => {
       desc: 'In this org, worked with a groups of professionals. Everyday was a new challenge. There give my time on a lot of projects such as IndusInd bank, alliancerxwp, GoIndigo, JLL, kangan Edu and much more. Their projects are mostly on AEM and Jahia which are sort of enterprise solutions.',
     },
     {
-      title: 'SurePeople',
-      subtitle: '2020 - Incumbent',
-      desc: 'This is a league of legends whose project is a Psychological analysis and help the user to understand and relate his personality with others, It is based on AngularJS as frontend and Java as backend. All the team members are at their peak and mostly worked remotely. ',
+      title: 'Kayra Solutions Pvt Ltd',
+      subtitle: '2022 - Incumbent',
+      desc: 'Here, I was working on a product known as SurePeople which is used for Psychological analysis and help anyone to understand his personality, It is based on AngularJS as frontend and Java as backend. All the team members are at their peak and mostly worked remotely.',
     },
   ]
 
